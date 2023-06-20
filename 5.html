@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+        
+
+// 5. Navigator
+
+function getBrowserInfo() {
+  const userAgent = navigator.userAgent;
+  let browserName, browserVersion;
+
+  //  Chrome
+  if (/chrome/i.test(userAgent)) {
+    const chromeMatch = userAgent.match(/chrome\/([\d.]+)/i);
+    browserName = "Chrome";
+    browserVersion = chromeMatch ? chromeMatch[1] : "";
+  }
+  //  Firefox
+  else if (/firefox/i.test(userAgent)) {
+    const firefoxMatch = userAgent.match(/firefox\/([\d.]+)/i);
+    browserName = "Firefox";
+    browserVersion = firefoxMatch ? firefoxMatch[1] : "";
+  }
+  // Safari
+  else if (/safari/i.test(userAgent)) {
+    const safariMatch = userAgent.match(/version\/([\d.]+)/i);
+    browserName = "Safari";
+    browserVersion = safariMatch ? safariMatch[1] : "";
+  }
+  // Internet Explorer
+  else if (/trident/i.test(userAgent)) {
+    const ieMatch = userAgent.match(/rv:([\d.]+)/i);
+    browserName = "Internet Explorer";
+    browserVersion = ieMatch ? ieMatch[1] : "";
+  }
+  //  Microsoft Edge
+  else if (/edge/i.test(userAgent)) {
+    const edgeMatch = userAgent.match(/edge\/([\d.]+)/i);
+    browserName = "Microsoft Edge";
+    browserVersion = edgeMatch ? edgeMatch[1] : "";
+  }
+  // Default case
+  else {
+    browserName = "Unknown";
+    browserVersion = "";
+  }
+
+  return {
+    name: browserName,
+    version: browserVersion
+  };
+}
+
+
+const browserInfo = getBrowserInfo();
+console.log(`Browser Name: ${browserInfo.name}`);
+console.log(`Browser Version: ${browserInfo.version}`);
+
+    </script>
+</body>
+</html>

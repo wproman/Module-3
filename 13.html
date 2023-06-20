@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <style>
+    .red{
+        color : red;
+    }
+   </style>
+    <div id="mulpara">
+        <p id="idpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, nihil?</p>
+        <p class="classpara">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci, facilis?</p>
+        <p class="classpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, repellendus?</p>
+    </div>
+    <script>
+
+        // 13.DOM Query Selector:
+  window.addEventListener('DOMContentLoaded', function(){
+    const allPara = document.getElementsByClassName('classpara');
+    for(let i=0; i< allPara.length; i++){
+        allPara[i].classList.add('red')
+  }  
+  })
+ 
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .button{
+        width: 400px;
+        height: 50px;
+        background-color:#030708;
+        display: block;
+        margin-top: 50px;
+        transition-duration: 0.4s;
+        color: yellow
+    }
+    
+    .button:hover {
+  background-color: yellow; /* Green */
+  color: rgb(0, 0, 0);
+}
+
+</style>
+<body>
+
+    <img id="myImg" width="300px" src="https://images.unsplash.com/photo-1459802071246-377c0346da93?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c3BsYXNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Image">
+    <button class="button" onclick="change()">Change</button>
+    <script>
+        
+     //   12.DOM Change Attribute Value:
+
+     function change() {
+      var image = document.getElementById("myImg");
+      image.src = "https://images.unsplash.com/photo-1541701494587-cb58502866ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8c3BsYXNofGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60";
+      image.alt = "Change image";
+    }
+     
+
+
+    </script>
+
+
+   
+</body>
+</html>
